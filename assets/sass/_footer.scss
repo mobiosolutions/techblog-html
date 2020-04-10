@@ -1,0 +1,167 @@
+footer {
+    background: $dark-blue-color;
+    p {
+        color: $gray-color;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    h4 {
+        font-weight: 500;
+        color: $white-color;
+        margin-bottom: 15px;
+    }
+    .footer-box{
+        img {
+            width: 130px;
+        }
+    }
+    .footer-menu {
+        li {
+            display: block;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                color: $white-color;
+                font-size: $font-size + 2;
+                position: relative;
+                padding-bottom: 2px;
+                &:hover,
+                &:focus {
+                    color: $primary-color;
+                    &:before {
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+                &:before {
+                    content: '';
+                    width: 0%;
+                    height: 2px;
+                    background: $primary-color;
+                    position: absolute;
+                    left: auto;
+                    right: 0;
+                    bottom: 0;
+                    @include transition(all, 0.5s, ease);
+                }
+            }
+        }
+    }
+    .input-group {
+        border: 2px solid $light-color;
+        overflow: hidden;
+        padding: 2px;
+        @include border-radius(4px);
+        .btn {
+            @include border-radius(4px !important);
+            font-size: $font-size - 2;
+            line-height: 1;
+        }
+        .form-control {
+            color: $white-color;
+            &:focus {
+                background: transparent;
+                border: none;
+            }
+            &::-webkit-input-placeholder {
+                color: $gray-color;
+            }
+            &:-ms-input-placeholder {
+                color: $gray-color;
+            }
+            &::placeholder {
+                color: $gray-color;
+            }
+        }
+    }
+    .footer-bottom {
+        padding: 20px 0;
+        border-top: 1px solid $gray-color;
+        p {
+            font-size: $font-size;
+            a {
+                color: $gray-color;
+                &:hover,
+                &:focus {
+                    color: $primary-color;
+                }
+            }
+        }
+        .footer_social_bar {
+            li {
+                margin-right: 20px;
+                display: inline-block;
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    font-size: $font-size + 4;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: transparentize($white-color, 0.9);
+                    color: transparentize($white-color, 0.5);
+                    @include border-radius(4px);
+                    &:hover,
+                    &:focus {
+                        background: $primary-color;
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+        .footer_sub_menu {
+            li {
+                border-right: 1px solid transparentize($white-color, 0.5);
+                padding: 0 10px;
+                @media screen and (max-width: $break-sm){
+                    padding: 0 6px 0 7px;
+                }
+                &:last-child {
+                    border-right: none;
+                    padding-right: 0;
+                }
+                a {
+                    color: $gray-color;
+                    font-size: $font-size;
+                    position: relative;
+                    top: 1px;
+                    &:hover,
+                    &:focus {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+.scroll-top {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    background: $white-color;
+    @include border-radius(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    color: $primary-color;
+    z-index: 90;
+    opacity: 0;
+    box-shadow: 0px 2px 20px 0px transparentize($black-color, 0.5);
+    &:hover {
+        background: $primary-color;
+        color: $white-color;
+        box-shadow: 0px 2px 20px 0px transparentize($primary-color, 0.5);
+    }
+    @media screen and (max-width: $break-md){
+        right: 15px;
+        bottom: 15px;
+    }
+}

@@ -1,0 +1,750 @@
+header {
+	background: $white-color;
+    position: relative;
+    width: 100%;
+    z-index: 99;
+    @include transition(all, 0.5s, ease);
+	.header-top {
+		background: $dark-blue-color;
+		padding: 8px 0;
+		span {
+			color: $white-color;
+			strong {
+				font-weight: 500;
+			}
+		}
+		.head_social_bar {
+			color: $white-color;
+			li {
+				padding-left: 12px;
+				display: inline-flex;
+				&:first-child {
+					border-right: 1px solid $white-color;
+					padding-right: 15px;
+				}
+				a {
+					color: $white-color;
+					font-size: $font-size + 4;
+					opacity: .5;
+					&:hover,
+					&:focus {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	.navbar {
+        padding: 0;
+        @media screen and (max-width: $break-lg){
+            padding: 10px 0;
+		}
+		.navbar-brand{
+			img {
+				width: 130px;
+			}	
+		} 	
+        .navbar-toggler{
+            &:hover, &:focus{
+                outline: none;
+                color: $primary-color;
+            }
+        }
+        .navbar-collapse {
+            @media screen and (max-width: $break-lg){
+                width: 250px;
+                position: fixed;
+                display: block;
+                right: -15px;
+				z-index: 100;
+				overflow-y: auto;
+                top: 0;
+                height: 100%;
+                background: $white-color;
+                @include box-shadow(0, 10px, 10px, 0, transparentize($black-color, 0.9));
+                @include transition(all, 0.5s, ease);
+                @include transform(translate(240px, 0));
+                &.show{
+                    @include transform(translate(0, 0));
+                }
+            }
+           
+        }
+		.navbar-nav {
+			li.nav-item {
+                display: block;
+                padding: 25px 0 25px 0;
+                @media screen and (max-width: $break-lg){
+                    padding: 0;
+                    border-bottom: 1px solid $light-color;
+                }
+				&.active {
+					a {
+                        color: $primary-color;
+                        @media screen and (max-width: $break-lg){
+                            background: $light-color;
+                        }
+					}
+				}
+				a {
+					padding: 0 15px !important;
+					font-size: $font-size + 2;
+					color: $dark-blue-color;
+					&:hover,
+					&:focus {
+                        color: $primary-color;
+                        @media screen and (max-width: $break-lg){
+                            background: $light-color;                     
+                        }
+                    }
+                    @media screen and (max-width: $break-lg){
+                        padding: 12px 15px !important;      
+                        position: relative;                  
+                    }
+                }                               
+				&.dropdown {
+					position: relative;
+					padding-right: 10px;
+					.dropdown-toggle {
+						&:after {
+							content: "\EA41";
+							font-family: 'remixicon';
+							border: none;
+							position: absolute;
+							top: 50%;
+							right: 2px;
+							margin: 0;
+                            @include transform(translate(0, -50%));
+                            @media screen and (max-width: $break-lg){
+                                content: "\EA10";
+                                right: 10px;
+                                font-size: $font-size + 6;
+                            }
+						}
+                    }
+                    @media screen and (max-width: $break-lg){
+                        &:hover, &.show{
+                            >.dropdown-toggle{
+                                &:after{
+                                    content: "\EFD0";
+                                }
+                            }
+                        }
+                    }
+					&:hover, &.show {
+						>.dropdown-menu {
+							opacity: 1;
+							visibility: visible;
+							padding: 0;
+							pointer-events: visible;
+							height: auto;
+                            @include box-shadow(0, 10px, 20px, 0, transparentize($black-color, 0.9));
+                            @media screen and (max-width: $break-lg){
+                                &.show{
+                                    height: auto;
+                                }
+                            }
+						}
+                    }
+                    .dropdown-menu{
+						top: 39px;
+						pointer-events: none;
+						@include transform(translate(0, 30px) !important);
+						@include border-radius(0 0 4px 4px);
+                        @media screen and (max-width: $break-lg){
+                            margin: 0;
+                            @include transform(translate(0, 0) !important);
+                            visibility: visible;
+                            opacity: 1;
+                            padding: 0;
+                            @include box-shadow(0, 0, 0, 0, transparent !important);
+                            height: 0;
+                            overflow: hidden;
+                            @include transition(all, 0.5s, ease);
+                            a{
+                                border-top:1px solid $light-color;
+                                padding: 12px 15px !important;
+                            }
+						}
+						.dropdown{
+							padding-right: 0;
+						}
+						@media screen and (min-width: $break-lg){
+							li.nav-item{
+								padding: 0;
+								border-bottom:1px solid transparentize($light-color, 0.5);
+								.dropdown-toggle{
+									padding: 13px 10px !important;
+									&:after{
+										content: "\EA5F";
+									}
+								}
+								.dropdown-menu{
+									left: 160px;
+									top: -2px;
+									@include transform(translate(0, 0) !important);
+								}
+							}
+						}
+                    }
+					.dropdown-item {
+						padding: 13px 10px!important;
+                        position: relative;
+                        z-index: 9;
+						&:after,
+						&:before {
+							content: '';
+							width: 100%;
+							height: 1px;
+							background: transparentize($light-color, 0.5);
+							position: absolute;
+							bottom: 0;
+							left: auto;
+							right: 0;
+							@include transition(all, 0.5s, ease);
+						}
+						&:before {
+							width: 0;
+                            background: $primary-color;
+                            z-index: 99;
+						}
+						&:hover,
+						&:focus {
+							&:before {
+								width: 100%;
+								left: 0;
+							}
+						}
+						&:focus{
+							background: $primary-color;
+							color: $white-color;
+						}
+					}
+				}
+			}	
+			.close-menu{
+				a{
+					padding: 13px 15px !important;
+					font-size: $font-size + 10;
+					font-weight: bold;
+					background: $primary-color;
+					color: $white-color;
+				}    
+			} 		
+        }
+        #search-modal {
+            font-size: $font-size + 6;
+            color: $dark-blue-color;
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+            @media screen and (max-width: $break-lg){
+                position: absolute;
+                right: 40px;
+                top: auto;
+            }
+        }
+    }
+	#search-outer {
+			height: 100%;
+            position: absolute;
+            @include transition(all, 0.8s, cubic-bezier(0.2, 1, 0.3, 1));
+			transform: translate3d(0, -100%, 0);
+			-webkit-transform: translate3d(0, -100%, 0);
+			z-index: 2000!important;
+			padding: 0;
+			display: flex;
+            -webkit-align-items: center;
+			-moz-align-items: center;
+			-ms-align-items: center;
+		    -ms-flex-align: center;
+			align-items: center;
+            justify-content: center;
+			overflow: hidden;
+			top: 0;
+			left: 0;
+			width: 100%;
+            background: $white-color;
+            @include box-shadow(0, 10px, 20px, 0, transparentize($black-color, 0.9));   
+			#search-box {
+				position: relative;
+				z-index: 10;
+				height: 100%;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-align-items: center;
+				-moz-align-items: center;
+				-ms-align-items: center;
+				-ms-flex-align: center;
+				align-items: center;
+				padding-top: 10px;
+				opacity: 0;
+				transition: all 0.2s ease;
+				form {
+					width: 100%;
+					.form-control {
+						border-bottom: 4px solid $black-color;
+						font-size: $font-size + 36;
+						color: $black-color;
+						line-height: 1;
+						height: auto;
+						padding: 0 60px 0 0px;
+						&::-webkit-input-placeholder {
+							color: $black-color;
+						}
+						&:-ms-input-placeholder {
+							color: $black-color;
+						}
+						&::placeholder {
+							color: $black-color;
+                        }
+                        @media screen and (max-width: $break-lg){
+                            font-size: $font-size + 14;
+                            padding-bottom: 8px;
+                        }
+                        &:focus{
+                            border-color: transparent !important;
+                            border-bottom-color: $black-color !important;
+                        }
+					}
+					span {
+						opacity: 0.7;
+						font-size: 16px;
+						margin-top: 15px;
+                        display: block;
+                        @media screen and (max-width: $break-lg){
+                            margin-top: 10px;
+                        }
+					}
+				}
+				#close {
+					position: absolute;
+					top: 15px;
+                    right: 0;
+                    @include transition(all, 0.8s, cubic-bezier(0.2, 1, 0.3, 1));
+					transform: translate3d(0, 100%, 0);
+					opacity: 0;
+					width: 50px;
+                    height: 50px;
+                    @media screen and (max-width: $break-lg){
+                        width: 35px;
+                        height: 35px;
+                    }
+					a {
+						display: block;
+						position: relative;
+						width: 50px;
+                        height: 50px;
+                        @media screen and (max-width: $break-lg){
+                            width: 35px;
+                            height: 35px;
+                        }
+						&:before {
+							position: absolute;
+							top: 0;
+							left: 0;
+							display: block;
+							width: 50px;
+							height: 50px;
+							border-radius: 50%;
+							background-color: transparentize($black-color, 0.95);
+							content: '';
+							-webkit-transform: scale(0);
+                            transform: scale(0);
+                            @include transition(all, 0.45s, cubic-bezier(0.15, 0.2, 0.1, 1));
+                            @media screen and (max-width: $break-lg){
+                                width: 35px;
+							    height: 35px;
+                            }
+						}
+						&:hover {
+							&:before {
+								-webkit-transform: scale(1.1);
+								transform: scale(1.1);
+							}
+						}
+						.close-line {
+							height: 0%;
+							width: 2px;
+							background: $black-color;
+							backface-visibility: hidden;
+							position: absolute;
+							border-radius: 5px;
+							left: 9px;
+							transition: all 0.4s ease;
+							&.close-line1 {
+								-webkit-transform: translateY(13px) translateX(15px) rotate(45deg);
+								transform: translateY(13px) translateX(15px) rotate(45deg);
+								transition-delay: 0.2s;
+							}
+							&.close-line2 {
+								-webkit-transform: translateY(-30px) translateX(-30px) rotate(-45deg);
+								transform: translateY(13px) translateX(15px) rotate(-45deg);
+								transition-delay: 0.4s;
+                            }
+                            @media screen and (max-width: $break-lg){
+                                left: 2px;
+                                top: -4px;
+                            }
+						}
+					}
+				}
+			}
+			&.open-searchBox {
+				transform: translate3d(0, 0%, 0);
+				-webkit-transform: translate3d(0, 0%, 0);
+				#search-box {
+					opacity: 1;
+					#close {
+						transform: translate3d(0, 0%, 0);
+						opacity: 1;
+						a {
+							&:before {
+								-webkit-transform: scale(1);
+								transform: scale(1);
+							}
+						}
+						.close-line {
+							height: 50%;
+						}
+					}
+				}
+			}
+	}
+    &.header-fixed {
+        position: fixed;
+        @include box-shadow(0, 10px, 20px, 0, transparentize($black-color, 0.9));
+        animation: menu_sticky .6s ease-in-out;
+        left: 0;
+        top: -39px;
+        .open-searchBox{
+            top: 39px !important;
+            @media screen and (max-width: $break-md){
+                top: 50px !important;
+            }
+            @media screen and (max-width: $break-sm){
+                top: 60px !important;
+            }
+        }
+        @media screen and (max-width: $break-md){
+            top: -61px;
+        }
+        @media screen and (max-width: $break-sm){
+            top: -80px;
+        }
+	}
+	&.HeaderOne{
+		.header-top {
+			background: $light-color;
+			span {
+				color: $gray-color;
+				strong {					
+					color: $dark-blue-color;
+				}
+			}
+			.head_social_bar {
+				color: $dark-blue-color;
+				font-weight: 500;
+				li {
+					&:first-child {
+						border-right: 1px solid $light-gray-color;
+					}
+					a {
+						color: $dark-blue-color;
+						font-weight: 400;
+						opacity: 1;
+						&:hover,
+						&:focus {
+							color: $primary-color;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.HeaderTwo{
+		&.header-fixed{
+			top: -75px;
+		}
+		@media screen and (max-width: $break-xl){
+			.navbar{
+				#search-modal{
+					position: static;
+				}
+			} 
+		}
+		.header-top{
+			padding: 0;
+			.head_social_bar{
+				li{
+					&:first-child{
+						border: none;
+						padding: 0;
+					}
+				}
+			}
+		}
+		.navbar-nav {
+			@media screen and (min-width: $break-lg){
+				li.nav-item {
+					padding: 0;
+					
+					>a{
+						color: $white-color;
+						padding: 10px 10px !important;
+						position: relative;
+						display: flex;
+						&.dropdown-toggle{
+							padding: 10px 15px 10px 10px !important;
+						}
+						&:before{
+							content: '';
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							width: 0;
+							height: 2px;
+							background: $primary-color;
+							@include transition(all, 0.5s, ease);
+						}
+						&:hover, &:focus{
+							&:before{
+								width: 100%;
+							}
+						}
+						>i{
+							font-size: $font-size + 4;
+							line-height: 1;
+						}
+					}
+					&.active{
+						>a{
+							&:before{
+								width: 100%;
+							}
+						}
+					}
+					&.dropdown{
+						.dropdown-toggle{
+							&:after{
+								right: -5px;
+							}
+						}
+						.dropdown-menu{
+							top: 8px;
+							.dropdown{
+								.dropdown-toggle{
+									color: $dark-blue-color;
+									&:hover, &:focus{
+										color: $primary-color;
+										background: #f8f9fa;
+									}
+									&:after{
+										right: 5px;
+									}
+								}
+							}
+						}
+					}		
+				}
+			}
+		}
+	}
+	&.HeaderThree{
+		&.header-fixed{
+			top: 0;
+			.navbar{
+				display: none;
+			}
+		}
+		@media screen and (max-width: $break-xl){
+			.navbar{
+				#search-modal{
+					position: static;
+				}
+			} 
+		}
+		.header-top {
+			background: $primary-color;
+			padding: 0;
+			.head_social_bar {
+				color: $dark-blue-color;
+				font-weight: 500;
+				li {
+					&:first-child{
+						border: none;
+						padding: 0;
+					}
+				}
+			}
+			.navbar-nav {
+				@media screen and (min-width: $break-lg){
+					li.nav-item {
+						padding: 0;
+						&:nth-child(2){
+							a.dropdown-toggle{
+								padding-left: 0 !important;
+							}
+						}
+						>a{
+							color: $white-color;
+							padding: 10px 10px !important;
+							position: relative;
+							display: flex;
+							&.dropdown-toggle{
+								padding: 10px 15px 10px 10px !important;
+							}
+							&:before{
+								content: '';
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								width: 0;
+								height: 1px;
+								background: $primary-color;
+								@include transition(all, 0.5s, ease);
+							}
+							&:hover, &:focus{
+								&:before{
+									width: 100%;
+								}
+							}
+							>i{
+								font-size: $font-size + 4;
+								line-height: 1;
+							}
+						}
+						&.active{
+							>a{
+								&:before{
+									width: 100%;
+								}
+							}
+						}
+						&.dropdown{
+							.dropdown-toggle{
+								&:after{
+									right: -5px;
+								}
+							}
+							.dropdown-menu{
+								top: 8px;
+								.dropdown{
+									.dropdown-toggle{
+										color: $dark-blue-color;
+										&:hover, &:focus{
+											color: $primary-color;
+											background: #f8f9fa;
+										}
+										&:after{
+											right: 5px;
+										}
+									}
+								}
+							}
+						}		
+					}
+				}
+			}
+		}
+	}
+	&.HeaderFour{
+		form{
+			@include border-radius(4px);
+			border: 2px solid $light-color;
+			padding: 2px;
+			.form-control {
+				height: 32px;
+				padding-left: 7px;
+				&:focus{
+					border-color: transparent !important;
+				}
+			}
+			.btn-primary {
+				font-size: $font-size + 4;
+				padding: 0;
+				width: 40px;
+				height: 32px;
+			}
+			@media screen and (max-width: $break-lg) {
+				width: 100%;
+				margin-top: 10px;
+			}
+		}
+	}
+	&.HeaderFive{
+		&.header-fixed{
+			top: 0;
+		}
+	}
+}
+
+@-webkit-keyframes menu_sticky {
+	0% {
+		margin-top: -120px;
+		opacity: 0
+	}
+	50% {
+		margin-top: -64px;
+		opacity: 0
+	}
+	100% {
+		margin-top: 0;
+		opacity: 1
+	}
+}
+
+@keyframes menu_sticky {
+	0% {
+		margin-top: -120px;
+		opacity: 0
+	}
+	50% {
+		margin-top: -64px;
+		opacity: 0
+	}
+	100% {
+		margin-top: 0;
+		opacity: 1
+	}
+}
+.overlay-background {
+    background: transparentize($black-color, 0.8);
+    width: 0%;
+    height: 100%;
+    position: fixed;
+    @include transition(all, 0.5s, ease);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: -9;
+}
+body{
+    &.bg-overlay{
+        overflow: hidden;
+        .overlay-background{
+            opacity: 1;
+            z-index: 99;
+            width: 100%;
+        }
+        
+    }
+}
+.topics-list {
+    white-space: nowrap;
+	overflow: auto;
+	position: relative;
+	@media screen and (max-width: $break-lg){
+		.mCSB_horizontal.mCSB_inside{
+			> .mCSB_container{
+				margin-bottom: 15px;
+			}
+		}
+	}
+    li{
+		display: inline-block;		
+    }
+}
+

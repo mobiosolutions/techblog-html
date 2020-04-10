@@ -1,0 +1,135 @@
+.pricing-plan{
+    .price_tab{
+        @include border-radius(45px);
+        @include flexbox{
+            justify-content: getJustify(c);
+            align-content: checkAlign(c); 
+        }
+        @include box-shadow(0, 3px, 21px, 0, transparentize($black-color, 0.92));
+        max-width: 320px;
+        background-color: $white-color;
+        margin: 0 auto 60px;
+        border: 0px;
+        position: relative;
+        .nav-item {
+            padding: 0px;
+            margin: 0px;
+            .nav-link {
+                margin: 0px;
+                font-size: $font-size + 2;
+                color: $gray-color;
+                padding: 20px 30px;
+                display: inline-block;
+                border: 0px;
+                @include border-radius(45px);
+                min-width: 150px;
+                text-align: center;
+                @include transition(color, 0.3s, linear);
+                position: relative;
+                z-index: 1;
+                &.active{
+                    border: 0px;
+                    @include border-radius(45px);
+                    background: transparent;
+                    color: $white-color;
+                }
+                @media screen and (max-width: $break-sm){   
+                    min-width: 130px;
+                }
+            }
+        }
+        .hover_bg {
+            position: absolute;
+            top: 50%;
+            @include transform(translate(0, -50%));
+            background: $primary-color;
+            left: 0;
+            height: calc(100% - 14px);
+            @include border-radius(45px);
+            z-index: 0;
+            @include transition(all, 0.2s, linear);
+        }
+    }
+    .price_item{
+        text-align: center;
+        background-color: $white-color;
+        @include box-shadow(0, 4px, 21px, 0, transparentize($dark-blue-color, 0.9));
+        padding: 30px 20px 40px;
+        position: relative;
+        overflow: hidden;
+        @include transition(all, 0.3s, cubic-bezier(.17,.690,.47,.995));
+        cursor: pointer;
+        .tag{
+            position: absolute;
+            color: $white-color;
+            background: $primary-color;
+            padding: 19px 32px;
+            top: -10px;
+            left: -39px;
+            @include rotate(-45);
+            span{
+                position: relative;
+                top: 11px;
+            }
+        }
+        h5{
+            color: $dark-blue-color;
+            font-weight: 500;
+            font-size: $font-size + 6;
+            margin: 30px 0 15px;
+        }
+        p{
+            color: $gray-color;
+            margin-bottom: 0px;
+        }
+        .price{
+            line-height: 40px;
+            border-bottom: 1px solid $lighter-color;
+            padding: 33px 0px 30px;
+            font-size: $font-size + 26;
+            font-weight: 700;
+            color: $dark-blue-color;
+            sup{
+                font-size: $font-size + 10;
+                font-weight: 500;
+                top: -17px;
+            }
+            sub{
+                color: $gray-color;
+                bottom: 0;
+                font-size: $font-size + 2;
+                font-weight: 300;
+            }
+        }
+        ul{
+            padding: 30px 0px 20px;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid $lighter-color;
+            li{
+                font-size: $font-size + 2;
+                font-weight: 300;
+                line-height: 40px;
+                color: $gray-color;
+                @include flexbox{
+                    justify-content: getJustify(c);
+                    align-content: checkAlign(c); 
+                }
+                a{
+                    font-size: $font-size + 2;
+                    font-weight: 400;
+                    color: $gray-color;
+                    margin-left: 4px;
+                }
+            }
+        }
+        &:hover, &.active{
+            @include box-shadow(0, 10px, 22px, 0, transparentize($primary-color, 0.85));
+        }
+        @media screen and (min-width: $break-xl){
+            padding: 50px 50px 40px;
+        }
+        @media screen and (max-width: $break-lg){
+            margin-bottom: 30px;
+        }
+    }
+}
