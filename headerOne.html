@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content='IE=edge' http-equiv=X-UA-Compatible>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    <title>TECHBlog</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/image/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/image/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/image/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/image/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/image/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/image/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/image/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/image/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/image/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/image/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/image/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/image/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/image/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/image/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Core Css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/remixicon.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap" rel="stylesheet">
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div class="overlay-background"></div>
+    <!-- ########## START: Header ########## -->
+    <header class="HeaderOne">
+        <div class="header-top">
+            <div class="container">
+                <div class="d-block d-md-flex align-items-center justify-content-between">
+                    <span class="d-block text-center text-md-left"><strong>Latest Post:</strong>  Most IT companies work on these 7 programming languages</span>
+                    <ul class="head_social_bar d-flex align-items-center justify-content-center justify-content-md-end mt-1 mt-md-0">
+                        <li>Subscribe</li>
+                        <li>
+                            <a href="javascript:;" class="ri-github-fill"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ri-medium-fill"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ri-facebook-box-fill"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ri-linkedin-box-fill"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ri-youtube-fill"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg justify-content-between">
+                <a class="navbar-brand p-0" href="/"><img src="assets/image/TECHBlog-logo.svg"></a>
+                <button class="navbar-toggler p-0 d-flex d-lg-none waves-effect waves-primary" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="ri-apps-line"></span>
+				</button>
+
+                <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="close-menu d-block d-lg-none waves-effect waves-primary">
+                            <a href="#" class="d-block ri-close-line"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Design</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Design-1</a></li>
+                                <li><a class="dropdown-item" href="#">Design-2</a></li>
+                                <li><a class="dropdown-item" href="#">Design-3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Development-1</a></li>
+                                <li><a class="dropdown-item" href="#">Development-2</a></li>
+                                <li><a class="dropdown-item" href="#">Development-3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="technology.html">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tools.html">Tools</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="freebies.html">Freebies</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Features</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Header</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="headerOne.html">Header 1</a></li>
+                                        <li><a class="dropdown-item" href="headerTwo.html">Header 2</a></li>
+                                        <li><a class="dropdown-item" href="headerThree.html">Header 3</a></li>
+                                        <li><a class="dropdown-item" href="headerFour.html">Header 4</a></li>
+                                        <li><a class="dropdown-item" href="headerFive.html">Header 5</a></li>
+                                    </ul>
+                                    <li><a class="dropdown-item" href="#">Design-2</a></li>
+                                    <li><a class="dropdown-item" href="#">Design-3</a></li>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="ri-search-line" id="search-modal"></a>
+            </nav>
+        </div>
+        <div id="search-outer">
+            <div class="container">
+                <div id="search-box">
+                    <form role="search" action="#" method="GET">
+                        <input type="text" class="form-control" placeholder="Search" />
+                        <span>Hit enter to search or ESC to close</span>
+                    </form>
+                    <div id="close">
+                        <a href="#">
+                            <span class="close-wrap"> 
+							    <span class="close-line close-line1"></span>
+                                <span class="close-line close-line2"></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ########## END: Header ########## -->
+
+    <!-- ########## START: MAIN PANEL ########## -->
+    <main class="bg-lighter">
+        <section class="container">
+            <!-- Start Topics -->
+            <div class="pt-4 pb-2 py-xl-4 d-flex">
+                <ul class="pr-2 py-2">
+                    <li class="d-flex py-1"><strong>Topics</strong></li>
+                </ul>
+                <ul class="topics-list">
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary"  href="javascript:;">Laravel</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary"  href="javascript:;">React js</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary"  href="javascript:;">Vue js</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary"  href="javascript:;">Laravel</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary" href="javascript:;">React js</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary"  href="javascript:;">Laravel</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary"  href="javascript:;">React js</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary"  href="javascript:;">Vue js</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary"  href="javascript:;">Laravel</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary" href="javascript:;">React js</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary"  href="javascript:;">Laravel</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary"  href="javascript:;">React js</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary"  href="javascript:;">Vue js</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary"  href="javascript:;">Laravel</a></li>
+                    <li class="pr-2"><a class="btn btn-white font-weight-500 waves-effect waves-primary" href="javascript:;">React js</a></li>
+                    <li><a class="btn btn-white font-weight-500"  href="javascript:;">Vue js</a></li>
+                </ul>
+            </div>
+            <hr class="border-light mt-0">
+            <!-- End Topics -->
+    
+    
+            <div class="row mt-4">
+                <!-- Start News List -->
+                <div class="col-md-8">
+                    <div class="title">
+                        <h2>Latest News</h2>
+                    </div>
+                    <div class="card blog-list mb-4">
+                        <div class="card-head">
+                            <ul>
+                                <li><a href="#">Laravel</a></li>
+                                <li><a href="#">Development</a></li>
+                            </ul>
+                            <div class="d-inline-flex justify-content-between align-items-center">
+                                <i class="ri-eye-fill pr-2"></i>
+                                <span>870</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="#">Laravel Vapor – Serverless deployment platform</a></h3>
+                            <span class="d-flex text-uppercase mb-2">MAY 14 2019 - Posted by <a href="#" class="px-2">John Doe</a> - 1 Min Read</span>
+                            <p class="card-text">Laravel Vapor is a serverless deployment platform for Laravel, powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love with the scalable. One day however a small line of blind text by the name of Lorem Ipsum
+                                decided to leave...</p>
+                        </div>
+                        <div class="card-foot">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="blog-read">READ MORE</a>
+                                <a href="#" class="blog-share"><i class="ri-share-line mr-2"></i>SHARE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card blog-list mb-4">
+                        <div class="card-head">
+                            <ul>
+                                <li><a href="#">REACT</a></li>
+                            </ul>
+                            <div class="d-inline-flex justify-content-between align-items-center">
+                                <i class="ri-eye-fill pr-2"></i>
+                                <span>676</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="#">React v16+ Cheat Sheet (PDF/JPG/Custom themes)</a></h3>
+                            <span class="d-flex text-uppercase mb-2">June 25 2019 - Posted by <a href="#" class="px-2">Zahir Patel</a> - 5 Min Read</span>
+                            <p class="card-text">React Vapor is a serverless deployment platform for React, powered by AWS. Launch your React infrastructure on Vapor and fall in love with the scalable. One day however a small line of blind text by the name of Lorem Ipsum decided
+                                to leave...</p>
+                        </div>
+                        <div class="card-foot">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="blog-read">READ MORE</a>
+                                <a href="#" class="blog-share"><i class="ri-share-line mr-2"></i>SHARE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card blog-list mb-4">
+                        <div class="card-head">
+                            <ul>
+                                <li><a href="#">Laravel</a></li>
+                                <li><a href="#">Development</a></li>
+                            </ul>
+                            <div class="d-inline-flex justify-content-between align-items-center">
+                                <i class="ri-eye-fill pr-2"></i>
+                                <span>345</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="#">WordPress asking for FTP Credentials while installing plugin/theme</a></h3>
+                            <span class="d-flex text-uppercase mb-2">MAY 14 2019 - Posted by <a href="#" class="px-2">John Doe</a> - 5 Min Read</span>
+                            <p class="card-text">This happens due to permission issue to the folder( wp-content ). follow the below steps to resolve the issue.</p>
+                        </div>
+                        <div class="card-foot">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="blog-read">READ MORE</a>
+                                <a href="#" class="blog-share"><i class="ri-share-line mr-2"></i>SHARE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card blog-list mb-4">
+                        <div class="card-head">
+                            <ul>
+                                <li><a href="#" class="text-uppercase">Design</a></li>
+                            </ul>
+                            <div class="d-inline-flex justify-content-between align-items-center">
+                                <i class="ri-eye-fill pr-2"></i>
+                                <span>170</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="#">SPAN x Design Notes, Episodes 16-20</a></h3>
+                            <span class="d-flex text-uppercase mb-2">June 25 2019 - Posted by <a href="#" class="px-2">Zahir Patel</a> - 5 Min Read</span>
+                            <p class="card-text">What’s it like to be friends with a robot? How does it feel to hold Google in your hand? Why should we value friction in design? These are just a few of the questions that arose onstage during our 2018 SPAN Helsinki conference.
+                                Behind the scenes...</p>
+                        </div>
+                        <div class="card-foot">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="blog-read">READ MORE</a>
+                                <a href="#" class="blog-share"><i class="ri-share-line mr-2"></i>SHARE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-3 text-center">
+                        <a href="javascript:;" class="text-uppercase text-gray font-weight-bold d-inline-flex"><i class="ri-add-line mr-2 line-height-1"></i>Load More</a>
+                    </div>
+    
+                    <!-- Start Editor's Choice -->
+                    <div class="title d-flex align-items-center justify-content-between">
+                        <h3>Editor's Choice</h3>
+                        <a href="">View All</a>
+                    </div>
+                    <div class="card blog-list mb-4">
+                        <div class="card-head">
+                            <div class="arrow-top-left"></div>
+                            <ul>
+                                <li><a href="#" class="text-uppercase">javascript</a></li>
+                            </ul>
+                            <div class="d-inline-flex justify-content-between align-items-center">
+                                <i class="ri-eye-fill pr-2"></i>
+                                <span>970</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="#">React v16+ Cheat Sheet (PDF/JPG/Custom themes)</a></h3>
+                            <span class="d-flex text-uppercase mb-2">MAY 14 2019 - Posted by <a href="#" class="px-2">John Doe</a> - 3 Min Read</span>
+                            <p class="card-text">Laravel Vapor is a serverless deployment platform for Laravel, powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love with the scalable. One day however a small line of blind text by the name of Lorem Ipsum
+                                decided to leave...</p>
+                        </div>
+                        <div class="card-foot">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="blog-read">READ MORE</a>
+                                <a href="#" class="blog-share"><i class="ri-share-line mr-2"></i>SHARE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End News List -->
+                <div class="col-md-4">
+                    <!-- Start Popular -->
+                    <div class="title d-flex align-items-center justify-content-between">
+                        <h3>Popular</h3>
+                        <a href="">View All</a>
+                    </div>
+                    <div class="card blog-small-list mb-3">
+                        <div class="card-body">
+                            <ul class="d-flex flex-wrap">
+                                <li class="mb-2">
+                                    <h3 class="card-title"><a href="#">Laravel Vapor – Serverless deployment 
+                                                                    platform!</a></h3>
+                                    <span class="d-flex text-uppercase mb-2">MAY 3 2019 - 1 Min Read </span>
+                                </li>
+                                <li class="mb-2">
+                                    <h3 class="card-title"><a href="#">AppleTV Screensaver Mashup with never-ending drone music.</a></h3>
+                                    <span class="d-flex text-uppercase mb-2">JAN 03 2019 - 1 Min Read </span>
+                                </li>
+                                <li class="mb-2">
+                                    <h3 class="card-title"><a href="#">Best Vue.js Component Libraries/Frameworks for 2018</a></h3>
+                                    <span class="d-flex text-uppercase mb-2">AUG 08 2019 - 1 Min Read </span>
+                                </li>
+                                <li class="mb-2">
+                                    <h3 class="card-title"><a href="#">React for Absolute Beginners — Free Course</a></h3>
+                                    <span class="d-flex text-uppercase mb-2">SEP 14 2019 - 1 Min Read </span>
+                                </li>
+                                <li>
+                                    <h3 class="card-title"><a href="#">Best React Component Libraries/Frameworks for 2018</a></h3>
+                                    <span class="d-flex text-uppercase mb-2">MAR 14 2019 - 1 Min Read</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Popular -->
+    
+                    <!-- Start Categories -->
+                    <div class="title mb-3 mt-4 d-flex align-items-center justify-content-between">
+                        <h3>Categories</h3>
+                        <a href="">View All</a>
+                    </div>
+                    <div class="card categories-list mb-3">
+                        <div class="card-body">
+                            <ul>
+                                <li><a href="#">AMP (3)</a></li>
+                                <li><a href="#">Bulma (2)</a></li>
+                                <li><a href="#">CSS (34)</a></li>
+                                <li><a href="#">Git (1)</a></li>
+                                <li><a href="#">Javascript (12)</a></li>
+                                <li><a href="#">jQuery (2)</a></li>
+                                <li><a href="#">HTML (15)</a></li>
+                                <li><a href="#">Laravel (17)</a></li>
+                                <li><a href="#">PHP (21)</a></li>
+                                <li><a href="#">React (6)</a></li>
+                                <li><a href="#">Uncategorized (1)</a></li>
+                                <li><a href="#">Vuejs (5)</a></li>
+                                <li><a href="#">Wordpress (4)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Categories -->
+    
+                    <!-- Start Tags -->
+                    <div class="title mb-3 mt-4 d-flex align-items-center justify-content-between">
+                        <h3>Tags</h3>
+                        <a href="">View All</a>
+                    </div>
+                    <div class="card tags-list mb-3">
+                        <div class="card-body">
+                            <ul>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">React (10)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">Vuejs (5)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">Technology (23)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">Laravel (5)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">React (10)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">Vuejs (5)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">Technology (23)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">Laravel (5)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">React (10)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">Vuejs (5)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">Technology (23)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">Laravel (5)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">React (10)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">Vuejs (5)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">Technology (23)</a></li>
+                                <li><a href="#" class="btn btn-light waves-effect waves-primary">Laravel (5)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Tags -->
+                </div>
+            </div>
+    
+            <!-- Start Subscribe -->
+            <div class="subscribe py-5 my-5 z-index1">
+                <div class="overlay bg-secondary opacity-9 z-index-1"></div>
+                <h3 class="mt-0 mb-3 text-white w-100">Don't Miss! Our Insignts</h3>
+                <p class="text-gray mb-4 w-100">A good start is to sign up for our weekly hand-written newsletter.</p>
+                <form class="input-group">
+                    <input type="text" class="form-control font-weight-500" placeholder="Email Address">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary text-uppercase font-weight-500 waves-effect waves-primary" type="button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+            <!-- End Subscribe -->
+    
+            <!-- Start Don't Miss -->
+            <div class="title d-flex align-items-center justify-content-between">
+                <h2>Don't Miss</h2>
+                <a href="">View All</a>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card blog-list mb-4">
+                        <div class="card-head">
+                            <ul>
+                                <li><a href="#">javascript</a></li>
+                            </ul>
+                            <div class="d-inline-flex justify-content-between align-items-center">
+                                <i class="ri-eye-fill pr-2"></i>
+                                <span>170</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="#">React v16+ Cheat Sheet (PDF/JPG/Custom themes)</a></h3>
+                            <span class="d-flex text-uppercase mb-2">MAY 14 2019 - Posted by <a href="#" class="px-2">John Doe</a> - 3 Min Read</span>
+                            <p class="card-text">React v16+ Cheat Sheet a serverless deployment platform for Laravel, powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love with the scalable. One day however by the name of Lorem Ipsum decided to leave...</p>
+                        </div>
+                        <div class="card-foot">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="blog-read">READ MORE</a>
+                                <a href="#" class="blog-share"><i class="ri-share-line mr-2"></i>SHARE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card blog-list mb-4">
+                        <div class="card-head">
+                            <ul>
+                                <li><a href="#">javascript</a></li>
+                            </ul>
+                            <div class="d-inline-flex justify-content-between align-items-center">
+                                <i class="ri-eye-fill pr-2"></i>
+                                <span>170</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="#">React v16+ Cheat Sheet (PDF/JPG/Custom themes)</a></h3>
+                            <span class="d-flex text-uppercase mb-2">MAY 14 2019 - Posted by <a href="#" class="px-2">John Doe</a> - 3 Min Read</span>
+                            <p class="card-text">React v16+ Cheat Sheet a serverless deployment platform for Laravel, powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love with the scalable. One day however by the name of Lorem Ipsum decided to leave...</p>
+                        </div>
+                        <div class="card-foot">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="blog-read">READ MORE</a>
+                                <a href="#" class="blog-share"><i class="ri-share-line mr-2"></i>SHARE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card blog-list mb-4">
+                        <div class="card-head">
+                            <ul>
+                                <li><a href="#">javascript</a></li>
+                            </ul>
+                            <div class="d-inline-flex justify-content-between align-items-center">
+                                <i class="ri-eye-fill pr-2"></i>
+                                <span>170</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="#">React v16+ Cheat Sheet (PDF/JPG/Custom themes)</a></h3>
+                            <span class="d-flex text-uppercase mb-2">MAY 14 2019 - Posted by <a href="#" class="px-2">John Doe</a> - 3 Min Read</span>
+                            <p class="card-text">React v16+ Cheat Sheet a serverless deployment platform for Laravel, powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love with the scalable. One day however by the name of Lorem Ipsum decided to leave...</p>
+                        </div>
+                        <div class="card-foot">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="blog-read">READ MORE</a>
+                                <a href="#" class="blog-share"><i class="ri-share-line mr-2"></i>SHARE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card blog-list mb-4">
+                        <div class="card-head">
+                            <ul>
+                                <li><a href="#">javascript</a></li>
+                            </ul>
+                            <div class="d-inline-flex justify-content-between align-items-center">
+                                <i class="ri-eye-fill pr-2"></i>
+                                <span>170</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="#">React v16+ Cheat Sheet (PDF/JPG/Custom themes)</a></h3>
+                            <span class="d-flex text-uppercase mb-2">MAY 14 2019 - Posted by <a href="#" class="px-2">John Doe</a> - 3 Min Read</span>
+                            <p class="card-text">React v16+ Cheat Sheet a serverless deployment platform for Laravel, powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love with the scalable. One day however by the name of Lorem Ipsum decided to leave...</p>
+                        </div>
+                        <div class="card-foot">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="blog-read">READ MORE</a>
+                                <a href="#" class="blog-share"><i class="ri-share-line mr-2"></i>SHARE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ########## END: MAIN PANEL ########## -->
+
+    <!-- ########## START: FOOTER ########## -->
+    <footer class="mt-5 w-100">
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-lg-4 col-md-6 py-2">
+                    <div class="footer-box">
+                        <img src="assets/image/TECHBlog-logo-white.svg" alt="Logo">
+                        <p class="mt-3 mb-0">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 py-2">
+                    <div class="footer-box">
+                        <ul class="footer-menu">
+                            <li><a href="javascript:;">Design</a></li>
+                            <li><a href="javascript:;">Development</a></li>
+                            <li><a href="javascript:;">Technology</a></li>
+                            <li><a href="javascript:;">Tools</a></li>
+                            <li><a href="javascript:;">Freebies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 py-2">
+                    <div class="footer-box">
+                        <ul class="footer-menu">
+                            <li><a href="javascript:;">PHP</a></li>
+                            <li><a href="javascript:;">React</a></li>
+                            <li><a href="javascript:;">Vue js</a></li>
+                            <li><a href="javascript:;">WordPress</a></li>
+                            <li><a href="javascript:;">UI/UX</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pt-2">
+                    <div class="footer-box">
+                        <h4>Subscribe</h4>
+                        <p>Subscribe to be the first to know new features! No spam, promise!</p>
+                        <form class="input-group">
+                            <input type="text" class="form-control font-weight-500" placeholder="Email Address">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary text-uppercase font-weight-500 px-3 waves-effect waves-primary" type="button">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="d-flex align-items-center flex-wrap justify-content-between">
+                    <ul class="footer_social_bar d-flex align-items-center justify-content-center justify-content-lg-start mb-3 mb-lg-0 col-12 col-xl-4 col-lg-6 px-0">
+                        <li>
+                            <a href="javascript:;" class="ri-github-fill waves-effect waves-primary"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ri-medium-fill waves-effect waves-primary"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ri-facebook-box-fill waves-effect waves-primary"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ri-linkedin-box-fill waves-effect waves-primary"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ri-youtube-fill waves-effect waves-primary"></a>
+                        </li>
+                    </ul>
+                    <ul class="footer_sub_menu d-block d-sm-flex align-items-center justify-content-center justify-content-lg-end order-xl-1 col-xl-4 col-lg-6 col-12  px-0">
+                        <li>
+                            <a href="javascript:;">About</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">Terms of Use</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">Privacy and Policy</a>
+                        </li>
+                    </ul>
+                    <p class="mb-0 col-xl-4 col-12 px-0 mt-3 mt-xl-0 text-center text-xl-left">Copyright &copy; 2019 <a href="/">TECHBlogs</a>. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ########## END: FOOTER ########## -->
+    <a href="#" class="scroll-top ri-arrow-up-s-line waves-effect waves-light"></a>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.js"></script>
+    <script src="assets/js/ripple.min.js"></script>
+    <script src="assets/js/custome.js"></script>
+
+</body>
+
+</html>
