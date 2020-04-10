@@ -1,0 +1,110 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $dark-blue-color;
+}
+
+.bg-primary {
+    background-color: $primary-color !important;
+}
+
+.bg-secondary {
+    background-color: $dark-blue-color !important;
+}
+
+.bg-success {
+    background-color: $green-color !important;
+}
+
+.bg-danger {
+    background-color: $red-color !important;
+}
+
+.bg-warning {
+    background-color: $yellow-color !important;
+}
+
+.bg-light {
+    background-color: $light-color !important;
+}
+
+.bg-lighter {
+    background-color: $lighter-color !important;
+}
+
+.bg-dark {
+    background-color: $black-color !important;
+}
+
+.text-primary {
+    color: $primary-color !important;
+}
+
+.text-secondary {
+    color: $dark-blue-color !important;
+}
+
+.text-success {
+    color: $green-color;
+}
+
+.text-danger {
+    color: $red-color;
+}
+
+.text-warning {
+    color: $yellow-color;
+}
+
+.text-light {
+    color: $light-color;
+}
+
+.text-lighter {
+    color: $lighter-color;
+}
+
+.text-dark {
+    color: $black-color;
+}
+
+.text-gray {
+    color: $gray-color;
+}
+.facebook{
+    color: #3056a7;
+}
+.twitter{
+    color: #00aced;
+}
+.instagram{
+    background: -webkit-linear-gradient(#e09b3d, #c74c4d, #c21975, #7024c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.ie {
+    .instagram{
+        color: #c74c4d;
+    }
+}
+.pinterest{
+    color: #cb2027;
+}
+.youtube{
+    color: #ff0000;
+}
+.soundcloud{
+    color: #fe8336;
+}
+.behance{
+    color: #115efa;
+}
+.vimeo{
+    color: #00adef;
+}
+.telegram{
+    color: #2ca5e0;
+}

@@ -1,0 +1,113 @@
+.social-icon-color{
+    li{
+        width: calc((100% / 3) - 0.1px);
+        float: left;
+        border-color: $lighter-color;
+        border-width: 0px 0 1px 1px;
+        border-style: solid;
+        &:nth-last-child(-n+3){
+            border-bottom-width: 0;
+        }
+        a{
+            padding: 20px 5px;
+            display: block;
+            text-align: center;
+            line-height: 21px;
+            color: $dark-blue-color;
+            i{
+                display: block;
+                margin-bottom: 15px;
+                font-size: $font-size + 10;
+                line-height: 1;
+            }
+        }
+    }
+}
+.category-bg{
+    li{
+        overflow: hidden;
+        @include border-radius(4px);
+        position: relative;
+        width: 100%;
+        color: $white-color;
+        z-index: 1;
+        padding: 25px;
+        margin-bottom: 10px;
+        @include flexbox{
+            justify-content: getJustify(sb);
+            align-content: checkAlign(c); 
+        }
+        &:after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: transparentize($black-color, 0.2);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        strong{
+            &:last-child{
+                margin-left: auto;
+            }
+        }
+        &.Tech-bg{
+            background: url(../image/blog/category/Technology.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        &.SDT-bg{
+            background: url(../image/blog/category/SoftwareDevelopmentTools.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        &.PW-bg{
+            background: url(../image/blog/category/ProgrammableWeb.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        &.TE-bg{
+            background: url(../image/blog/category/TechnologyEnterprise.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        &.EAD-bg{
+            background: url(../image/blog/category/EnterpriseAppDevelopment.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+.cta-contact-bg{
+    position: relative;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    span {
+        opacity: 0.04;
+        font-size: 78px;
+        font-weight: 100;
+        letter-spacing: -9px;
+        line-height: 1;
+        display: block;
+        color: $dark-blue-color;
+        position: absolute;
+        top: 50%;
+        left: -21px;
+        @include transform(translate(0, -50%));
+        strong {
+            font-weight: 900;
+            font-family: Arial;
+        }
+        @media screen and (min-width: $break-md){
+            font-size: 109px;
+        }
+        @media screen and (min-width: $break-xl){
+            font-size: 85px;
+        }
+        @media screen and (min-width: $break-xxl){
+            font-size: 107px;
+        }
+    }
+} 

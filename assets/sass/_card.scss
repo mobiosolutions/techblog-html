@@ -1,0 +1,14 @@
+.card {
+    border: none;
+    @include border-radius(4px);
+    .card-header {
+        background: transparent;
+        border-color: $light-color;
+    }
+    .card-body{
+        padding: 20px;
+    }
+    .card-foot{
+        padding: 20px;
+    }
+}

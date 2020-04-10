@@ -1,0 +1,66 @@
+.blog-details{
+	pre {
+		background: $dark-blue-color;
+		@include border-radius(4px);
+		color: $white-color;
+		word-break: normal;
+		word-wrap: normal;
+		code {
+			display: inline-block;
+			font-size: $font-size + 2;
+			font-weight: 400;
+			line-height: 24px;
+			tab-size: 4;
+			white-space: pre;
+			color: #72e0d1;
+			span{
+				margin: 0;
+				color: #72e0d1;
+				display: inline;
+			}
+			&.hljs{
+				&.css{
+					color: #72e0d1;
+					span{
+						&.hljs-tag{
+							font-weight: bold;
+							text-transform: uppercase;
+							color: $yellow-color;
+							&:nth-child(2){
+								font-weight: 400;
+								text-transform: none;
+								color: #f5d67b;
+							}
+						}
+						&.hljs-pseudo, &.hljs-value{
+							color: #f5d67b;
+						}
+						&.hljs-number{
+							color: #fc9463;
+						}
+					}					
+				}
+				&.javascript{
+					span{
+						&.hljs-keyword{
+							color: #f92672;
+						}
+						&.hljs-title{
+							color: #a6e22e;
+						}
+						&.hljs-params, &.hljs-subst{
+							color: #f8f8f2;
+						}
+						&.hljs-regexp, &.hljs-number{
+							color: #ae81ff;
+						}
+						&.hljs-string{
+							color: #e6db74;
+						}
+					}			
+				}
+			}
+		}
+	}
+}
+
