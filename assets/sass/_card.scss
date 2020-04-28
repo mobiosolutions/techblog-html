@@ -1,14 +1,24 @@
 .card {
     border: none;
     @include border-radius(4px);
+    @include transition(all, 0.5s, ease);
     .card-header {
         background: transparent;
         border-color: $light-color;
     }
     .card-body{
         padding: 20px;
+        @media screen and (max-width: $break-lg){
+            padding: 15px;
+        }
     }
     .card-foot{
         padding: 20px;
+    }
+    &:hover{
+        @include box-shadow(0, 3px, 21px, 0, transparentize($black-color, 0.8));
+    }
+    &.bg-transparent{
+        @include box-shadow(0, 0, 0, 0, transparentize($black-color, 0.99));
     }
 }

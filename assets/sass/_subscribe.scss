@@ -2,10 +2,11 @@
     background: url(../image/bg-1.jpg) no-repeat top center;
     background-attachment: fixed;
     position: relative;
-    display: flex;
     flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+    @include flexbox{
+        align-content: checkAlign(c); 
+        justify-content: getJustify(c);
+    }
     text-align: center;
     padding: 0 15px;
     .input-group {
@@ -34,6 +35,23 @@
             &::placeholder {
                 color: $gray-color;
             }
+        }
+    }
+}
+.subscribe--two {
+    span{
+        color: transparentize($white-color, 0.4);
+    }
+    h3{
+        color: $white-color;
+        margin: 10px 0 0;
+    }
+    .form-control {
+        flex: 1 1 auto;
+        width: 1%;
+        color: $white-color;
+        &:focus{
+            background: transparent;
         }
     }
 }

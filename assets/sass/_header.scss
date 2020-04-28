@@ -254,13 +254,11 @@ header {
 			-webkit-transform: translate3d(0, -100%, 0);
 			z-index: 2000!important;
 			padding: 0;
-			display: flex;
-            -webkit-align-items: center;
-			-moz-align-items: center;
-			-ms-align-items: center;
-		    -ms-flex-align: center;
-			align-items: center;
-            justify-content: center;
+			min-height: 130px;
+			@include flexbox{
+				align-items: checkAlign(c); 
+				justify-content: getJustify(c);
+			}
 			overflow: hidden;
 			top: 0;
 			left: 0;
@@ -271,14 +269,10 @@ header {
 				position: relative;
 				z-index: 10;
 				height: 100%;
-				display: -webkit-flex;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-align-items: center;
-				-moz-align-items: center;
-				-ms-align-items: center;
-				-ms-flex-align: center;
-				align-items: center;
+				@include flexbox{
+					align-items: checkAlign(c); 
+					justify-content: getJustify(c);
+				}
 				padding-top: 10px;
 				opacity: 0;
 				transition: all 0.2s ease;
@@ -351,8 +345,7 @@ header {
 							border-radius: 50%;
 							background-color: transparentize($black-color, 0.95);
 							content: '';
-							-webkit-transform: scale(0);
-                            transform: scale(0);
+							@include transform(scale(0));
                             @include transition(all, 0.45s, cubic-bezier(0.15, 0.2, 0.1, 1));
                             @media screen and (max-width: $break-lg){
                                 width: 35px;
@@ -361,8 +354,7 @@ header {
 						}
 						&:hover {
 							&:before {
-								-webkit-transform: scale(1.1);
-								transform: scale(1.1);
+								@include transform(scale(1.1));
 							}
 						}
 						.close-line {
@@ -402,8 +394,7 @@ header {
 						opacity: 1;
 						a {
 							&:before {
-								-webkit-transform: scale(1);
-								transform: scale(1);
+								@include transform(scale(1));
 							}
 						}
 						.close-line {
@@ -681,37 +672,9 @@ header {
 	}
 }
 
-@-webkit-keyframes menu_sticky {
-	0% {
-		margin-top: -120px;
-		opacity: 0
-	}
-	50% {
-		margin-top: -64px;
-		opacity: 0
-	}
-	100% {
-		margin-top: 0;
-		opacity: 1
-	}
-}
 
-@keyframes menu_sticky {
-	0% {
-		margin-top: -120px;
-		opacity: 0
-	}
-	50% {
-		margin-top: -64px;
-		opacity: 0
-	}
-	100% {
-		margin-top: 0;
-		opacity: 1
-	}
-}
 .overlay-background {
-    background: transparentize($black-color, 0.8);
+    background: transparentize($black-color, 0.3);
     width: 0%;
     height: 100%;
     position: fixed;

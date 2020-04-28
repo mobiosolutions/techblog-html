@@ -28,14 +28,18 @@
         overflow: hidden;
         @include border-radius(4px);
         position: relative;
-        width: 100%;
-        color: $white-color;
+        display: block;
         z-index: 1;
-        padding: 25px;
         margin-bottom: 10px;
-        @include flexbox{
-            justify-content: getJustify(sb);
-            align-content: checkAlign(c); 
+        @include transition(all, 0.5s, ease);
+        a{
+            @include flexbox{
+                justify-content: getJustify(sb);
+                align-content: checkAlign(c); 
+            }
+            color: $white-color;
+            width: 100%;
+            padding: 25px;
         }
         &:after{
             content: '';
@@ -46,6 +50,10 @@
             left: 0;
             top: 0;
             z-index: -1;
+        }
+        &:hover{
+            @include box-shadow(0, 4px, 10px, 0, transparentize($black-color, 0.6));
+            @include transform(translate(0, -1px));
         }
         strong{
             &:last-child{
@@ -111,3 +119,199 @@
         }
     }
 } 
+.editor-choice{
+    padding: 20px;
+    overflow: hidden;
+    .arrow-top-left {
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        background: $primary-color;
+        width: 50px;
+        height: 50px;
+        @include rotate(45);
+    }
+    .post{
+        .post-thumbnails{
+            min-width: 140px;
+            @media screen and (max-width: $break-md){
+                min-width: 50px;
+                img{
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+        }
+        .post-info{
+            .tags-link{
+                li{
+                    a{
+                        color: $dark-blue-color;
+                        line-height: 24px;
+                        font-weight: 500;
+                        &:hover, &:focus{
+                            color: $primary-color;
+                        }
+                        @media screen and (max-width: $break-md){
+                            font-size: $font-size - 4;
+                        }
+                    }
+                }
+            }
+            h3{
+                line-height: 1;
+                margin-bottom: 8px;
+                font-size: $font-size;
+                a {
+                    color: $dark-blue-color;
+                    font-size: $font-size + 6;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                    @media screen and (max-width: $break-md){
+                        font-size: $font-size + 2;
+                    }
+                }
+            }
+        }
+        .post-meta{
+            margin-bottom: 3px;
+            li{
+                color: $light-gray-color;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                -ms-flex-align: center;
+                align-items: center;
+                padding: 5px 5px 5px 0;
+                &:last-child{
+                    padding-right: 0;
+                }
+                @media screen and (max-width: $break-md){
+                    font-size: $font-size - 2;
+                }
+                i{
+                    font-size: $font-size + 2;
+                    @include transform(translate(0, -1px));
+                    @media screen and (max-width: $break-md){
+                        font-size: $font-size - 2;
+                    }
+                }
+                a {
+                    color: $light-gray-color;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                    @media screen and (max-width: $break-md){
+                        font-size: $font-size - 2;
+                    }
+                }
+            }
+        }
+        p{
+            color: $gray-color;
+            line-height: 1.7;
+            @media screen and (max-width: $break-md){
+                font-size: $font-size - 2;
+            }
+        }
+    } 
+}
+.blog_item-wrapper{
+    position: relative;
+    overflow: hidden;
+    max-height: 597px;
+    z-index: 1;
+    @include border-radius(4px);
+    @include transition(all, 0.5s, ease);
+    .img-fluid{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+    &:after, &:before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include transition(all, 0.5s, ease);
+    }
+    &:before{
+        @include gradient(transparentize($white-color, 0.99), transparentize($black-color, 0.3), vertical);
+    }
+    &:after{
+        opacity: 0;
+        @include gradient(transparentize($white-color, 0.99), transparentize($primary-color, 0.3), vertical);
+    }
+    .figure-caption{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        z-index: 1;
+        @include transition(all, 0.5s, ease);
+        .tags-link{
+            a{
+                line-height: 24px;
+                font-weight: 500;
+                @include line-clamp(2, 1.5);
+                &:hover, &:focus{
+                    color: $primary-color;
+                }
+            }
+        }
+        h3 {
+            line-height: 1;
+            margin-bottom: 15px;
+            font-weight: 500;
+            a {
+                color: $white-color;
+                font-size: $font-size + 10;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+        .post-meta{
+            @include flexbox{
+                align-content: checkAlign(c); 
+                justify-content: getJustify(fs);
+            }
+            li{
+                color: $white-color;
+                @include flexbox{
+                    align-content: checkAlign(c); 
+                    justify-content: getJustify(fs);
+                }
+                padding: 5px 10px 5px 0;
+                &:last-child{
+                    padding-right: 0;
+                }
+                i{
+                    font-size: $font-size + 2;
+                    @include transform(translate(0, -1px));
+                }
+                a {
+                    color: $white-color;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    &:hover{
+        .figure-caption{
+            @include transform(translate(0%, -100%));
+        }
+        &:before{
+            opacity: 0;
+        }
+        &:after{
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.hovercard {
+    text-align: center;
+    .cardheader {
+        background: url("../image/profile-bg.jpg");
+        background-size: cover;
+        background-position: top center;
+        height: 150px;
+        @include border-radius(8px 8px 0 0);
+        position: relative;
+        overflow: hidden;
+        &:after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: transparentize($dark-blue-color, 0.5);
+        }
+    }
+    .avatar {
+        position: relative;
+        top: -50px;
+        margin-bottom: -20px;
+        @include transform(translate(0, 15%));
+        img {
+            width: 80px;
+            height: 80px;
+            max-width: 80px;
+            max-height: 80px;
+            @include border-radius(4px);
+            @include box-shadow(0, 3px, 7px, 0, transparentize($black-color, 0.9));
+        }
+    }
+    .info{
+        h2{
+            font-size: $font-size + 6;
+            margin: 0;
+        }
+        span{
+            font-size: $font-size;
+            color: $light-gray-color;
+        }
+        p{
+            margin-bottom: 10px;
+            color: $gray-color;
+            line-height: 1.5;
+        }
+        .head_social_bar {
+			li {
+				padding-left: 12px;
+				display: inline-flex;
+				a {
+					color: $black-color;
+					font-size: $font-size + 14;
+					opacity: .5;
+					&:hover,
+					&:focus {
+						opacity: 1;
+					}
+				}
+			}
+		}
+    }
+}

@@ -96,6 +96,20 @@ $(function() {
             {
                 $("footer").footerReveal();
             } 
+
+            // ------------------------ File Upload
+            $("input[type=file]").on("change", function(){
+                // Name of file and placeholder
+                var file = this.files[0].name;
+                if($(this).val()!="")
+                {
+                    $(".file-upload-name").text(file);
+                    $(".file-upload-name").css("display", "block");
+                } else {
+                    $(".file-upload-name").text();
+                    $(".file-upload-name").css("display", "none");
+                }
+            });
             
         });
 
