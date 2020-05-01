@@ -1,6 +1,27 @@
 
 .banner {
     position: relative;
+    .banner-slider{
+        .slider-track {
+            transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+        }
+        .slick-slide{
+            height: calc(100vh - 130px);
+            img{
+                object-fit: cover;
+                object-position: top center;
+                height: 100%;
+                transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+                transform: scale(1.1);
+            }
+            &.slick-active {
+                img {
+                    transform: scale(1);
+                }
+            }
+        }
+        
+    }
     .parallax{
         object-fit: cover;
         object-position: top center;
@@ -20,7 +41,7 @@
             right: 0;
             left: 0;
             z-index: 10;
-            padding-top: 10px;
+            padding-top: 30px;
             li{ 
                 &:after{
                     color: $white-color;
@@ -102,5 +123,17 @@
         }
     }
 }
-
+.homeFour{
+    .blog_item-wrapper{
+        height: 500px;
+        @media screen and (max-width: $break-md) {
+            height: 300px;
+        }
+    }
+}
+.homeFive{
+    .card{
+        @include box-shadow(0, 4px, 15px, 0, transparentize($black-color, 0.95));
+    }
+}
 

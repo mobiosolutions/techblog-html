@@ -342,7 +342,7 @@ header {
 							display: block;
 							width: 50px;
 							height: 50px;
-							border-radius: 50%;
+							@include border-radius(100px);
 							background-color: transparentize($black-color, 0.95);
 							content: '';
 							@include transform(scale(0));
@@ -363,7 +363,7 @@ header {
 							background: $black-color;
 							backface-visibility: hidden;
 							position: absolute;
-							border-radius: 5px;
+							@include border-radius(5px);
 							left: 9px;
 							transition: all 0.4s ease;
 							&.close-line1 {

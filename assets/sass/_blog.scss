@@ -624,6 +624,11 @@
             }
         }
     }
+    &.no-border{
+        .post{
+            border-bottom: none;
+        }
+    }
 }
 
 .blog-review{
