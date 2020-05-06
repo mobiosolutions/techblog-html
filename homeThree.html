@@ -205,25 +205,92 @@
             </div>
             <div class="parallax-content d-flex align-items-center">
                 <div class="container text-center">
-                    <h1 class="mx-auto">Complete Beginner’s Guide to Information Architecture</h1>
-                    <p class="mx-auto">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <div class="d-flex mb-2 align-items-center justify-content-center w-100">
-                        <span class="text-uppercase">MAY 14 2019 - Posted by <a href="#" class="px-2">John Doe</a> - 1 Min Read</span>
-                        <ul class="post-meta pl-2">
-                            <li>
-                                <i class="ri-eye-fill pr-2"></i>
-                                <span>2.5K</span>
-                            </li>
-                            <li>
-                                <i class="ri-heart-fill pr-2"></i>
-                                <span>453</span>
-                            </li>
-                            <li>
-                                <i class="ri-chat-4-fill pr-2"></i>
-                                <span>45</span>
-                            </li>
-                        </ul>
-                    </div>    
+                    <div class="banner-content-slider">
+                        <div>
+                            <h1 class="mx-auto">Complete Beginner’s Guide to Information Architecture</h1>
+                            <p class="mx-auto">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="d-flex mb-2 align-items-center justify-content-center w-100">
+                                <span class="text-uppercase">MAY 14 2019 - Posted by <a href="#" class="px-2">John Doe</a> - 1 Min Read</span>
+                                <ul class="post-meta pl-2">
+                                    <li>
+                                        <i class="ri-eye-fill pr-2"></i>
+                                        <span>2.5K</span>
+                                    </li>
+                                    <li>
+                                        <i class="ri-heart-fill pr-2"></i>
+                                        <span>453</span>
+                                    </li>
+                                    <li>
+                                        <i class="ri-chat-4-fill pr-2"></i>
+                                        <span>45</span>
+                                    </li>
+                                </ul>
+                            </div>   
+                        </div>
+                        <div>
+                            <h1 class="mx-auto">Information Architecture Complete Beginner’s Guide to</h1>
+                            <p class="mx-auto">Dollor site has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="d-flex mb-2 align-items-center justify-content-center w-100">
+                                <span class="text-uppercase">MAY 14 2019 - Posted by <a href="#" class="px-2">John Doe</a> - 1 Min Read</span>
+                                <ul class="post-meta pl-2">
+                                    <li>
+                                        <i class="ri-eye-fill pr-2"></i>
+                                        <span>2.5K</span>
+                                    </li>
+                                    <li>
+                                        <i class="ri-heart-fill pr-2"></i>
+                                        <span>453</span>
+                                    </li>
+                                    <li>
+                                        <i class="ri-chat-4-fill pr-2"></i>
+                                        <span>45</span>
+                                    </li>
+                                </ul>
+                            </div>   
+                        </div>
+                        <div>
+                            <h1 class="mx-auto">Complete Beginner’s Guide to Information Architecture</h1>
+                            <p class="mx-auto">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="d-flex mb-2 align-items-center justify-content-center w-100">
+                                <span class="text-uppercase">JUN 20 2020 - Posted by <a href="#" class="px-2">Alis More</a> - 50 Min Read</span>
+                                <ul class="post-meta pl-2">
+                                    <li>
+                                        <i class="ri-eye-fill pr-2"></i>
+                                        <span>10.5K</span>
+                                    </li>
+                                    <li>
+                                        <i class="ri-heart-fill pr-2"></i>
+                                        <span>120</span>
+                                    </li>
+                                    <li>
+                                        <i class="ri-chat-4-fill pr-2"></i>
+                                        <span>80</span>
+                                    </li>
+                                </ul>
+                            </div>   
+                        </div>
+                        <div>
+                            <h1 class="mx-auto">Information Architecture Complete Beginner’s Guide to</h1>
+                            <p class="mx-auto">Dollor site has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="d-flex mb-2 align-items-center justify-content-center w-100">
+                                <span class="text-uppercase">FEB 28 2020 - Posted by <a href="#" class="px-2">Devid Clue</a> - 3 Min Read</span>
+                                <ul class="post-meta pl-2">
+                                    <li>
+                                        <i class="ri-eye-fill pr-2"></i>
+                                        <span>1.5K</span>
+                                    </li>
+                                    <li>
+                                        <i class="ri-heart-fill pr-2"></i>
+                                        <span>1230</span>
+                                    </li>
+                                    <li>
+                                        <i class="ri-chat-4-fill pr-2"></i>
+                                        <span>100</span>
+                                    </li>
+                                </ul>
+                            </div>   
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -711,7 +778,19 @@
                 speed: 1000,
                 infinite: true,
                 cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-                touchThreshold: 100
+                touchThreshold: 100,
+                asNavFor: '.banner-content-slider'
+            });
+            $('.banner-content-slider').slick({
+                fade: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                speed: 1000,
+                infinite: true,
+                cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+                touchThreshold: 100,
+                asNavFor: '.banner-slider',
             });
         });
         

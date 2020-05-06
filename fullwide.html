@@ -717,20 +717,50 @@ function $initHighlight(block, cls) {
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
+    <script src="assets/js/highlight.min.js"></script>
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/jquery.mCustomScrollbar.js"></script>
     <script src="assets/js/ripple.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+    <script src="assets/js/simpleParallax.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/custome.js"></script>
     <script>
-        $(document).ready(function(){
-            var image = document.getElementsByClassName('parallax');
-            new simpleParallax(image, {
+    $(document).ready(function() {
+        var image = document.getElementsByClassName('parallax');
+        new simpleParallax(image, {
                 scale: 1.5
-            });
         });
-        
+        /* ======= Highlight.js Plugin ======= */    
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    
+        /* ======= Slick Slider ======= */  
+        $('.related-blog-slider').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            // autoplay: true,
+            // autoplaySpeed: 2000,
+            speed: 1000,
+            responsive: [
+            {
+                breakpoint: 491,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+            ]
+        });
+        /* ======= Target Id ======= */
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top - 90
+            }, 1000);
+        });
+    });
     </script>
 </body>
 

@@ -11,6 +11,14 @@
     &:focus{
         @include box-shadow(0, 0, 0, 0, transparent);
     }
+    @include inlineflexbox{
+        justify-content: getJustify(c);
+        align-items: checkAlign(c); 
+    }
+    i, img{
+        margin-left: -10px;
+        line-height: 1;
+    }
 }
 
 .btn-sm,

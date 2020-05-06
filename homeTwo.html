@@ -223,18 +223,17 @@
                     <div class="title">
                         <h2>Latest News</h2>
                     </div> 
+                    <div class="post-slider mb-4">
+                        <div><img src="assets/image/blog/img-3.jpg" alt="TECHBlog"></div>
+                        <div><img src="assets/image/blog/img-4.jpg" alt="TECHBlog"></div>
+                        <div><img src="assets/image/blog/img-5.jpg" alt="TECHBlog"></div>
+                        <div><img src="assets/image/blog/img-6.jpg" alt="TECHBlog"></div>
+                        <div><img src="assets/image/blog/img-7.jpg" alt="TECHBlog"></div>
+                        <div><img src="assets/image/blog/thumbnail-1.jpg" alt="TECHBlog"></div>
+                    </div>
                     <div class="row mb-4">
                         <div class="col-12 col-lg-6 mb-3 mb-lg-0">
-                            <div class="card blog-list blog-img">
-                                <div class="card-img-top">
-                                    <a href="#">
-                                        <img src="assets/image/blog/thumbnail-1.jpg" alt="Card image cap">
-                                    </a>
-                                    <div class="post-view d-inline-flex justify-content-between align-items-center">
-                                        <i class="ri-eye-fill pr-1"></i>
-                                        <span>170</span>
-                                    </div>
-                                </div>
+                            <div class="card blog-list">
                                 <div class="card-head">
                                     <ul>
                                         <li><a href="#">javascript</a></li>
@@ -267,16 +266,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-6">
-                            <div class="card blog-list blog-img">
-                                <div class="card-img-top">
-                                    <a href="#">
-                                        <img src="assets/image/blog/thumbnail-1.jpg" alt="Card image cap">
-                                    </a>
-                                    <div class="post-view d-inline-flex justify-content-between align-items-center">
-                                        <i class="ri-eye-fill pr-1"></i>
-                                        <span>870</span>
-                                    </div>
-                                </div>
+                            <div class="card blog-list">
                                 <div class="card-head">
                                     <ul>
                                         <li><a href="#">Laravel</a></li>
@@ -295,7 +285,7 @@
                                             <span>JUN 11 2019</span>
                                         </li>
                                     </ul>
-                                    <p class="card-text">Laravel Vapor is a serverless deployment platform for Laravel, powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love with the scalable. One day however a small line of blind text by the name of Lorem Ipsum decided to leave...</p>
+                                    <p class="card-text">Laravel Vapor is a serverless deployment platform for Laravel, powered by AWS. Launch your Laravel infrastructure...</p>
                                     <ul class="tags-list">
                                         <li><a href="javascript:;" class="btn btn-light waves-effect waves-primary">React</a></li>
                                         <li><a href="javascript:;" class="btn btn-light waves-effect waves-primary">Javascript</a></li>
@@ -818,11 +808,26 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
+    <script src="assets/js/highlight.min.js"></script>
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/jquery.mCustomScrollbar.js"></script>
     <script src="assets/js/ripple.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/custome.js"></script>
+    <script>
+    $(document).ready(function() {
+        /* ======= Slick Slider ======= */  
+        $('.post-slider').slick({
+            prevArrow:"<i class='ri-arrow-left-s-line slide-prev'></i>",
+            nextArrow:"<i class='ri-arrow-right-s-line slide-next'></i>",
+            dots: true,
+            autoplay: true,
+            speed: "1000",
+            pauseOnFocus: false,
+            pauseOnHover: false
+        });
+    });
+    </script>
 
 </body>
 

@@ -748,8 +748,7 @@ function $initHighlight(block, cls) {
         /* ======= Video Plugin ======= */ 
         const player = new Plyr('#video');
         const player1 = new Plyr('#video1');
-        
-        /* ======= Highlight.js Plugin ======= */    
+       /* ======= Highlight.js Plugin ======= */    
         $('pre code').each(function(i, block) {
             hljs.highlightBlock(block);
         });
